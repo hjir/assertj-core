@@ -26,16 +26,16 @@ import static org.mockito.Mockito.verify;
  */
 class IntegerAssert_isCloseToPercentage_int_Test extends IntegerAssertBaseTest {
 
-    private final Percentage percentage = withPercentage(3);
-    private final int value = 42;
+  private final Percentage percentage = withPercentage(3);
+  private final int value = 42;
 
-    @Override
-    protected IntegerAssert invoke_api_method() {
-        return assertions.isCloseTo(value, percentage);
-    }
+  @Override
+  protected IntegerAssert invoke_api_method() {
+    return assertions.isCloseTo(value, percentage);
+  }
 
-    @Override
-    protected void verify_internal_effects() {
-        verify(integers).assertIsCloseToPercentage(getInfo(assertions), getActual(assertions), value, percentage);
-    }
+  @Override
+  protected void verify_internal_effects() {
+    verify(integers).assertIsCloseToPercentage(getInfo(assertions), getActual(assertions), value, percentage);
+  }
 }

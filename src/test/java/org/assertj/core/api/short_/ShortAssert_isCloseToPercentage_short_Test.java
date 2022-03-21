@@ -21,16 +21,16 @@ import org.assertj.core.data.Percentage;
 
 class ShortAssert_isCloseToPercentage_short_Test extends ShortAssertBaseTest {
 
-    private final Percentage percentage = withPercentage((short) 5);
-    private final Short value = (short)10;
+  private final Percentage percentage = withPercentage((short) 5);
+  private final Short value = (short) 10;
 
-    @Override
-    protected ShortAssert invoke_api_method() {
-        return assertions.isCloseTo(value, percentage);
-    }
+  @Override
+  protected ShortAssert invoke_api_method() {
+    return assertions.isCloseTo(value, percentage);
+  }
 
-    @Override
-    protected void verify_internal_effects() {
-        verify(shorts).assertIsCloseToPercentage(getInfo(assertions), getActual(assertions), value, percentage);
-    }
+  @Override
+  protected void verify_internal_effects() {
+    verify(shorts).assertIsCloseToPercentage(getInfo(assertions), getActual(assertions), value, percentage);
+  }
 }

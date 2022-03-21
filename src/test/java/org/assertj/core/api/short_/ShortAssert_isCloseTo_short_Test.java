@@ -21,7 +21,7 @@ import org.assertj.core.data.Offset;
 
 class ShortAssert_isCloseTo_short_Test extends ShortAssertBaseTest {
 
-  private final Offset<Short> offset = offset((short)5);
+  private final Offset<Short> offset = offset((short) 5);
   private final Short value = 8;
 
   @Override
